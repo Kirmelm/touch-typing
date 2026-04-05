@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>KirmelK touch typing</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<div class="header">
+    <button class="btn btn-blue" onclick="toggleLang(this)" id="langBtn">RU (Загрузка...)</button>
+    <button class="btn" onclick="showErrors(this)">Ошибки</button>
+    <div class="stat-card"><span id="wpm" class="stat-val">0.0</span><span class="stat-label">Зн/мин</span></div>
+    <div class="stat-card"><span id="acc" class="stat-val">100</span><span class="stat-label">Точность %</span></div>
+    <div class="stat-card"><span id="best" class="stat-val">0.0</span><span class="stat-label">Рекорд</span></div>
+</div>
+
+<div id="display-container">
+    <div id="text-display">Подключение словарей...</div>
+</div>
+
+<div class="keyboard" id="kb"></div>
+
+<div id="error-modal">
+    <h3 style="text-align: center">Аналитика промахов</h3>
+    <div class="error-grid">
+        <div class="lang-col"><h4>RU</h4><div id="err-ru"></div></div>
+        <div class="lang-col"><h4>EN</h4><div id="err-en"></div></div>
+    </div>
+    <button class="btn" style="width: 100%; margin-top: 20px" onclick="document.getElementById('error-modal').style.display='none'">Закрыть</button>
+</div>
+<script src="logik.js"></script>
+</body>
+</html>
